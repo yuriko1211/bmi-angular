@@ -1,13 +1,14 @@
-<div class="container">
-  <div class="input field">
-    <label for="height"
-      >身長
-      <input type="text" id="height" />
-    </label>
-    <label for="weight"
-      >体重
-      <input type="text" id="weight" />
-    </label>
-  </div>
-  <button>計算</button>
-</div>
+<form>
+  <label for="height">
+    身長
+    <input type="text" id="height" #height />
+  </label>
+  <label for="weight"
+    >体重
+    <input type="text" id="weight" #weight />
+  </label>
+  <button (click)="calcurate(parseInt(height.value), parseInt(weight.value))">
+    計算
+  </button>
+  <div>BMI: {{ bmi }}</div>
+</form>

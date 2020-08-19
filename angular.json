@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bmi"
+    }
+  },
+  "defaultProject": "bmi",
+  "cli": {
+    "analytics": "885cc3e8-950b-421f-b93a-c23fe3b040db"
+  }
 }

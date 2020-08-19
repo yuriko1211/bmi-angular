@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BmiComponent } from './bmi/bmi.component';
 
@@ -11,6 +12,7 @@ import { BmiComponent } from './bmi/bmi.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([{ path: '', component: BmiComponent }]),
   ],
   providers: [],

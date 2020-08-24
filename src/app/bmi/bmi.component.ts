@@ -16,6 +16,10 @@ export class BmiComponent implements OnInit {
     return parseInt(str);
   }
 
+  isNumber(n: any) {
+    return !isNaN(n);
+  }
+
   calcurate(height: number, weight: number) {
     this.bmi = Math.round((weight / (height / 100) ** 2) * 10) / 10;
   }

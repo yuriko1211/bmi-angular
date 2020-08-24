@@ -1,14 +1,25 @@
 <form>
   <label for="height">
     身長
-    <input type="text" id="height" #height />
+    <input
+      type="text"
+      id="height"
+      (keyup)="(0)"
+      (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
+      #height
+    />
   </label>
   <label for="weight"
     >体重
-    <input type="text" id="weight" #weight />
+    <input
+      type="text"
+      id="weight"
+      (keyup)="(0)"
+      (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
+      #weight
+    />
   </label>
-  <button (click)="calcurate(parseInt(height.value), parseInt(weight.value))">
-    計算
-  </button>
-  <div>BMI: {{ bmi }}</div>
+  <div>
+    BMI:<span id="bmi" *ngIf="isNumber(bmi)">{{ bmi }}</span>
+  </div>
 </form>

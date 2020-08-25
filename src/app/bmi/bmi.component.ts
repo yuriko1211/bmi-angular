@@ -16,7 +16,10 @@ export class BmiComponent implements OnInit {
     return parseInt(str);
   }
 
-  isNumber(n: any) {
+  isdisplay(n: number) {
+    if (n == 0) {
+      return false;
+    }
     return !isNaN(n);
   }
 

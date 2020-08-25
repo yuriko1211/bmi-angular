@@ -1,25 +1,32 @@
-<form>
-  <label for="height">
-    身長
-    <input
-      type="text"
-      id="height"
-      (keyup)="(0)"
-      (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
-      #height
-    />
-  </label>
-  <label for="weight"
-    >体重
-    <input
-      type="text"
-      id="weight"
-      (keyup)="(0)"
-      (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
-      #weight
-    />
-  </label>
-  <div>
+<h1 class="ui header">BMI計算ツール</h1>
+
+<form class="ui form">
+  <div class="input field">
+    <label for="height">
+      身長
+      <input
+        type="text"
+        id="height"
+        (keyup)="(0)"
+        (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
+        #height
+      />
+    </label>
+  </div>
+  <div class="input field">
+    <label for="weight"
+      >体重
+      <input
+        type="text"
+        id="weight"
+        (keyup)="(0)"
+        (keyup)="calcurate(parseInt(height.value), parseInt(weight.value))"
+        #weight
+      />
+    </label>
+  </div>
+
+  <div class="display">
     BMI:<span id="bmi" *ngIf="isdisplay(bmi)">{{ bmi }}</span>
   </div>
 </form>
